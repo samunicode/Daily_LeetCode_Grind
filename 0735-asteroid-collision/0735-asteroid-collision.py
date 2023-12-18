@@ -1,8 +1,7 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
         stack = []
-        ls = asteroids
-        for stone in ls:
+        for stone in asteroids:
             stack.append(stone)
             while len(stack) >= 2 and stack[-1] < 0 and stack[-2] > 0:
                 stone1 = stack.pop()
